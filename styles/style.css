@@ -1,7 +1,6 @@
 body {
     position: relative;
     max-width: 1920px;
-    min-width: 1168px;
     font-family: 'Raleway', 'Arial', 'sans-serif';
 }
 
@@ -11,11 +10,12 @@ a {
 
 h1 {
     margin: 0 auto;
-    padding: 250px 150px 0 150px;
+    padding: 245px 120px 10px 120px;
     text-transform: uppercase;
     color: white;
     font-size: 60px;
     font-weight: 700;
+    letter-spacing: 0.06em;
     text-align: justify-all;
 }
 
@@ -30,24 +30,24 @@ p {
 }
 
 header {
-    background: url("../images/header-backgroudn.jpg") center top #333751;
+    background: url("../images/header-backgroudn-min.jpg") center top #333751;
     margin: 0 auto;
     width: inherit;
 }
 
 .header-content {
     position: relative;
-    width: 1168px;
+    max-width: 1168px;
     margin: 0 auto;
     text-align: center;
     letter-spacing: 0.03em;
 }
 
 .menu {
-    background: url("../images/header-backgroudn.jpg") center top #333751;
+    background-color: rgba(49, 54, 79, 0.6);
     position: fixed;
     top: 0;
-    width: inherit;
+    width: 1168px;
     padding: 35px 0;
     border-bottom: solid 1px #66697e;
     height: 30px;
@@ -78,15 +78,15 @@ header {
     line-height: 30px;
 }
 
-.menu li{
+.menu li {
     display: inline;
     list-style-type: none;
     font-size: 12px;
     font-weight: 600;
-    padding-left: 50px;
+    padding-left: 55px;
 }
 
-.menu li a{
+.menu li a {
     color: #cacad1;
 }
 
@@ -106,7 +106,7 @@ header p {
 header button {
     width: 200px;
     height: 50px;
-    margin: 60px 0 152px 0;
+    margin: 55px 0 150px 0;
     background-color: #e84545;
     color: white;
     font-size: 14px;
@@ -134,17 +134,17 @@ header button:active {
 
 section {
     position: relative;
-    width: 1168px;
+    max-width: 1168px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 80px 0 90px 0;
     text-align: center;
 }
 
 section article {
+    box-sizing: border-box;
     float: left;
-    width: calc(100%/3 - 80px);
-    margin: 40px;
-    padding: 0;
+    width: 33%;
+    padding: 40px 40px 20px 40px;
 }
 
 section:after {
@@ -153,34 +153,84 @@ section:after {
     clear: both;
 }
 
-section img {
+.icons {
+    background: url("../images/icon-min.png") no-repeat 15px;
     height: 60px;
+    width: 80px;
+    margin: 0 auto;
+}
+
+article:nth-child(2) .icons {
+    background-position: -95px;
+}
+
+article:nth-child(3) .icons {
+    background-position: -180px;
+}
+
+article:nth-child(4) .icons {
+    background-position: -290px;
+}
+
+article:nth-child(5) .icons {
+    background-position: -395px;
+}
+
+article:nth-child(6) .icons {
+    background-position: -500px;
 }
 
 section h2 {
-    margin: 30px 0 20px 0;
+    margin: 32px 0 20px 0;
 }
 
 section p {
     text-align: justify-all;
+    color: #6C7279;
 }
 
 aside {
     position: relative;
     width: inherit;
-
 }
 
-aside img {
+.photo {
+    position: relative;
+    box-sizing: border-box;
     float: left;
-    width: calc(100%/4 - 0.75px);
+    width: 25%;
     line-height: 0;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    cursor: pointer;
+}
+
+.photo > img {
+    width: 100%;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background: rgba(232, 69, 69, 0.88);
+    color: white;
+    text-align: center;
     margin-bottom: 1px;
     margin-right: 1px;
 }
 
-aside img:nth-child(4n) {
-    margin-right: 0;
+.overlay h2 {
+    margin-top: 36%;
+}
+
+.photo:hover .overlay {
+    display: block;
 }
 
 aside:after {
@@ -199,20 +249,20 @@ footer {
 
 .footer-top {
     position: relative;
-    width: 1168px;
+    max-width: 1168px;
     margin: 0 auto;
 }
 
 .footer-top div {
     float: left;
-    width: calc(100%/3);
+    width: 33%;
     color: white;
-    margin: 60px 0;
+    margin: 50px 0;
 }
 
 .footer-top p {
     color: #cacad1;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0 30px;
     word-break: break-all;
 }
@@ -240,7 +290,12 @@ footer {
     background-color: #313454;
     font-size: 14px;
     line-height: 20px;
-    padding: 30px 0;
+    padding: 30px;
+}
+
+.footer-down div {
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .footer-down span {
